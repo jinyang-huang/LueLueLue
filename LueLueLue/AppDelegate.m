@@ -17,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [UIScrollView appearance].scrollIndicatorInsets =UIEdgeInsetsMake(0, 0, 0, 0);
     return YES;
 }
 
