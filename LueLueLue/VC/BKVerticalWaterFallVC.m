@@ -82,7 +82,7 @@
 }
 
 - (NSInteger)flowLayout:(BKCollectionWaterFallLayout *)layout columnsInCollectionView:(UICollectionView *)collectionView{
-    return 2;
+    return 3;
 }
 
 

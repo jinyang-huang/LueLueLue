@@ -48,11 +48,12 @@
 
 @implementation BKLuaVC
 
+CGFloat kH = 200;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     
-    self.dataArr = [@[@"解析脚本按钮点击事件",@"注册方法按钮点击事件",@"调用lua方法点击事件",@"注册模块按钮点击事件",@"注册类按钮点击事件",@"导入原生类型按钮点击事件"] mutableCopy];
+    self.dataArr = [@[@"解析脚本按钮点击事件",@"注册方法按钮点击事件",@"调用lua方法点击事件",@"注册模块按钮点击事件",@"注册类按钮点击事件",@"导入原生类型按钮点击事件",@"2",@"2",@"2",@"2",@"2",@"2",@"2",@"2",@"2",@"2",@"2",@"2"] mutableCopy];
     self.methodArr = [@[@"evalScriptButtonClickedHandler",@"regMethodClickedHandler",@"callLuaMethodClickedHandler",@"registerModuleClickedHandler",@"registerClassClickedHandler",@"importNativeClassClickedHandler"] mutableCopy];
     
     
@@ -62,11 +63,49 @@
     // Do any additional setup after loading the view.
 }
 
+#pragma mark - UI
+
+- (void)createUI {
+    self.navigationItem.title = @"Lua";
+//    [self.view addSubview:self.tableView];
+
+    self.view.backgroundColor = [UIColor randomColor];
+    
+    
+    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, kNavH, kWidth, kHeight - kNavH - kBottom)];
+    bgView.backgroundColor = [UIColor colorWithWhite:1 alpha:0];
+    [self.view addSubview:bgView];
+    
+    bgView.clipsToBounds = NO;
+    [bgView addSubview:self.tableView];
+    
+    CGFloat curH =  200;
+    self.tableView.backgroundColor = bgView.backgroundColor;
+    self.tableView.frame = CGRectMake(0, curH, kWidth, bgView.height - kBottom - curH);
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGPoint offP = scrollView.contentOffset;
+    if (offP.y < 0) {
+        return;
+    }
+    
+//    NSLog(@"%f",offP.y);
+//
+//    CGFloat curH = kNavH + 200 - offP.y;
+//    curH = MAX(kNavH, curH);
+//    self.tableView.frame = CGRectMake(0, curH, kWidth, kHeight - kBottom - curH);
+//    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:NO];
+}
+
+- (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view{
+
+}
+
 
 /**
  解析脚本按钮点击事件
  
- @param sender 事件对象
  */
 - (void)evalScriptButtonClickedHandler
 {
@@ -80,7 +119,6 @@
 /**
  注册方法按钮点击事件
  
- @param sender 事件对象
  */
 - (void)regMethodClickedHandler
 {
@@ -117,7 +155,6 @@
 /**
  调用lua方法点击事件
  
- @param sender 事件对象
  */
 - (void)callLuaMethodClickedHandler {
     //加载Lua脚本
@@ -136,7 +173,6 @@
 /**
  注册模块按钮点击事件
  
- @param sender 事件对象
  */
 - (void)registerModuleClickedHandler
 {
@@ -147,7 +183,6 @@
 /**
  注册类按钮点击事件
  
- @param sender 事件对象
  */
 - (void)registerClassClickedHandler
 {
@@ -158,7 +193,6 @@
 /**
  导入原生类型按钮点击事件
  
- @param sender 事件对象
  */
 - (void)importNativeClassClickedHandler
 {
@@ -172,12 +206,6 @@
 
 
 
-#pragma mark - UI
-
-- (void)createUI {
-    self.navigationItem.title = @"Lua";
-    [self.view addSubview:self.tableView];
-}
 
 #pragma mark - tableView
 
@@ -190,6 +218,10 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 44;
 }
 
@@ -209,6 +241,9 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.methodArr.count <= indexPath.row) {
+        return;
+    }
     NSString *methodStr = self.methodArr[indexPath.row];
     SEL selector= NSSelectorFromString(methodStr);
     [self performSelector:selector];

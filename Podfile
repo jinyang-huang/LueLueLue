@@ -17,6 +17,7 @@ pod 'Masonry'
 pod 'YYText'
 pod 'AVOSCloud'
 pod 'Toast'
+pod 'ZLPhotoBrowser'
 
 end
 

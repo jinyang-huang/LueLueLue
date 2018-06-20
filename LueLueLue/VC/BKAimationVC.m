@@ -14,6 +14,8 @@
 @property(nonatomic, strong) NSMutableArray *dataArr;
 @property(nonatomic, strong) Person *p;
 @property(nonatomic, weak) NSTimer *timer;
+@property(nonatomic,strong) UILabel *verLbl;
+@property(nonatomic, assign) BOOL animat;
 @end
 
 @implementation BKAimationVC
@@ -31,16 +33,87 @@
     tv.textColor = kBlackColor;
     [self.view addSubview:tv];
     
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        NSLog(@"la");
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:5 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        [UIView animateWithDuration:5 animations:^{
+            self.verLbl.top = kHeight;
+        } completion:^(BOOL finished) {
+            self.verLbl.top = kNavH;
+        }];
+
     }];
     self.timer = timer;
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    
+    
+    
+    
+    
+    
+    self.verLbl = [UILabel buildLabelWithFrame:CGRectMake(150, kNavH, 20, 0) content:@"1234567890" textColor:[UIColor redColor] font:BKFontR(20) textAlignment:1 lines:0];
+    [self.verLbl ha_calculateHeight];
+    [self.view addSubview:self.verLbl];
+    
+    
+    self.animat = NO;
+    
+    
     // Do any additional setup after loading the view.
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self initDanmu];
-    self.p.name = @"k";
+    
+    self.animat = !self.animat;
+    
+    
+
+    
+    
+//    [self initDanmu];
+//    self.p.name = @"k";
+//
+//
+//
+//    NSString *str = @"abcdetr";
+//
+//
+//    NSUInteger i = 0;
+//    NSUInteger j = str.length - 1;
+//    unichar characters[str.length];
+//    while (i < j) {
+//        characters[j] = [str characterAtIndex:i];
+//        characters[i] = [str characterAtIndex:j];
+//        i++;
+//        j--;
+//    }
+//    if (i == j) {
+//        characters[i] = [str characterAtIndex:i];
+//    }
+//    NSLog(@"%@",[NSString stringWithCharacters:characters length:str.length]);
+    
+    
+    
+//    dispatch_group_t group = dispatch_group_create();
+//    dispatch_queue_t queue = dispatch_queue_create("abc", DISPATCH_QUEUE_CONCURRENT);
+//
+//    dispatch_group_async(group, queue, ^{
+//        sleep(1);
+//        NSLog(@"休眠一秒");
+//    });
+//
+//    dispatch_group_async(group, queue, ^{
+//        sleep(2);
+//        NSLog(@"休眠2秒");
+//    });
+//
+//    dispatch_group_async(group, queue, ^{
+//        sleep(4);
+//        NSLog(@"休眠4秒");
+//    });
+//
+//    dispatch_group_notify(group, queue, ^{
+//        NSLog(@"完成");
+//    });
+    
+    
 }
 - (void)dealloc {
     [self.timer invalidate];

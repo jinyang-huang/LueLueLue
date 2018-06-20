@@ -11,6 +11,8 @@
 #import "BKAimationVC.h"
 #import "BKMasonryTableVC.h"
 #import "BKLuaVC.h"
+#import "BKKeyChainVC.h"
+#import "BKPhotoVC.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -26,8 +28,9 @@
     [super viewDidLoad];
     self.title = @"T";
     
-    self.dataArr = @[@"瀑布流",@"动画",@"Mas",@"Lua"];
-    self.vcArr = @[@"BKVerticalWaterFallVC",@"BKAimationVC",@"BKMasonryTableVC",@"BKLuaVC"];
+    self.dataArr = @[@"瀑布流",@"动画",@"Mas",@"Lua",@"Keychain",@"Camera"];
+    self.vcArr = @[@"BKVerticalWaterFallVC",@"BKAimationVC",@"BKMasonryTableVC",@"BKLuaVC",@"BKKeyChainVC",@"BKPhotoVC"];
+   
     
     [self.view addSubview:self.tableView];
     // Do any additional setup after loading the view, typically from a nib.
@@ -62,6 +65,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     Class class = NSClassFromString(self.vcArr[indexPath.row]);
     UIViewController *vc = [[class alloc] init];
+    vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

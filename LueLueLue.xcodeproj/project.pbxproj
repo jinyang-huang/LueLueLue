@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A1277AE620D2BCD5005DBD11 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A1277AE520D2BCD5005DBD11 /* Person.m */; };
+		A1753EA820DA3D91004A66E9 /* BKPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1753EA720DA3D91004A66E9 /* BKPhotoVC.m */; };
 		A181BDF720D369E20032036B /* BKMasonryTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A181BDF620D369E20032036B /* BKMasonryTableVC.m */; };
 		A181BDFA20D369F60032036B /* BKMasonryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A181BDF920D369F60032036B /* BKMasonryCell.m */; };
 		A181BE0620D3701E0032036B /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A181BDFF20D3701E0032036B /* UITableView+FDIndexPathHeightCache.m */; };
@@ -25,6 +26,10 @@
 		A181BE5920D3A3AF0032036B /* libLuaScriptCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A181BE4420D3A3AF0032036B /* libLuaScriptCore.a */; };
 		A181BE5B20D3A3AF0032036B /* libLuaScriptCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A181BE5620D3A3AF0032036B /* libLuaScriptCore.a */; };
 		A181BE5F20D3ABEE0032036B /* timg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A181BE5E20D3ABEE0032036B /* timg.jpg */; };
+		A187841A20D893E100881D34 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A187841920D893E100881D34 /* Security.framework */; };
+		A187841E20D89D4E00881D34 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A187841C20D89D4E00881D34 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A187842120D89D8700881D34 /* BKKeyChainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A187842020D89D8700881D34 /* BKKeyChainVC.m */; };
+		A187842320D89E8100881D34 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A187842220D89E8100881D34 /* AdSupport.framework */; };
 		A187C05920D20711006E6D30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A187C05820D20711006E6D30 /* AppDelegate.m */; };
 		A187C05C20D20711006E6D30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A187C05B20D20711006E6D30 /* ViewController.m */; };
 		A187C05F20D20711006E6D30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A187C05D20D20711006E6D30 /* Main.storyboard */; };
@@ -56,6 +61,8 @@
 		0C48FA93B70DF3E257100E14 /* Pods-LueLueLue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LueLueLue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LueLueLue/Pods-LueLueLue.debug.xcconfig"; sourceTree = "<group>"; };
 		A1277AE420D2BCD5005DBD11 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		A1277AE520D2BCD5005DBD11 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		A1753EA620DA3D91004A66E9 /* BKPhotoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKPhotoVC.h; sourceTree = "<group>"; };
+		A1753EA720DA3D91004A66E9 /* BKPhotoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKPhotoVC.m; sourceTree = "<group>"; };
 		A181BDF520D369E20032036B /* BKMasonryTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKMasonryTableVC.h; sourceTree = "<group>"; };
 		A181BDF620D369E20032036B /* BKMasonryTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKMasonryTableVC.m; sourceTree = "<group>"; };
 		A181BDF820D369F60032036B /* BKMasonryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKMasonryCell.h; sourceTree = "<group>"; };
@@ -109,6 +116,13 @@
 		A181BE5520D3A3AF0032036B /* LuaScriptCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaScriptCore.h; sourceTree = "<group>"; };
 		A181BE5620D3A3AF0032036B /* libLuaScriptCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLuaScriptCore.a; sourceTree = "<group>"; };
 		A181BE5E20D3ABEE0032036B /* timg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpg; sourceTree = "<group>"; };
+		A187841820D8929E00881D34 /* LueLueLue.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LueLueLue.entitlements; sourceTree = "<group>"; };
+		A187841920D893E100881D34 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A187841C20D89D4E00881D34 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		A187841D20D89D4E00881D34 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		A187841F20D89D8700881D34 /* BKKeyChainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKKeyChainVC.h; sourceTree = "<group>"; };
+		A187842020D89D8700881D34 /* BKKeyChainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKKeyChainVC.m; sourceTree = "<group>"; };
+		A187842220D89E8100881D34 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		A187C05420D20711006E6D30 /* LueLueLue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LueLueLue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A187C05720D20711006E6D30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A187C05820D20711006E6D30 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -165,6 +179,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A187842320D89E8100881D34 /* AdSupport.framework in Frameworks */,
+				A187841A20D893E100881D34 /* Security.framework in Frameworks */,
 				A181BE5B20D3A3AF0032036B /* libLuaScriptCore.a in Frameworks */,
 				A181BE5920D3A3AF0032036B /* libLuaScriptCore.a in Frameworks */,
 				FAAE76C4F0D59F98AFDD8B36 /* Pods_LueLueLue.framework in Frameworks */,
@@ -177,6 +193,8 @@
 		58C5E30065CEDDF1D7ADF5B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A187842220D89E8100881D34 /* AdSupport.framework */,
+				A187841920D893E100881D34 /* Security.framework */,
 				B09CEBE0EE95DC9532E8F29A /* Pods_LueLueLue.framework */,
 			);
 			name = Frameworks;
@@ -208,6 +226,7 @@
 		A181BDFC20D370090032036B /* vender */ = {
 			isa = PBXGroup;
 			children = (
+				A187841B20D89D3200881D34 /* Keychain */,
 				A181BE3420D3A3AF0032036B /* LuaScriptCore_iOS_OSX_2.2.0 */,
 				A181BDFD20D3701E0032036B /* Classes */,
 			);
@@ -317,6 +336,15 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		A187841B20D89D3200881D34 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				A187841D20D89D4E00881D34 /* KeychainItemWrapper.h */,
+				A187841C20D89D4E00881D34 /* KeychainItemWrapper.m */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		A187C04B20D20711006E6D30 = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +366,7 @@
 		A187C05620D20711006E6D30 /* LueLueLue */ = {
 			isa = PBXGroup;
 			children = (
+				A187841820D8929E00881D34 /* LueLueLue.entitlements */,
 				A181BE5D20D3ABE20032036B /* Source */,
 				A181BDFC20D370090032036B /* vender */,
 				A181BDFB20D36E160032036B /* Model */,
@@ -416,6 +445,10 @@
 				A181BDF620D369E20032036B /* BKMasonryTableVC.m */,
 				A181BE0E20D39E580032036B /* BKLuaVC.h */,
 				A181BE0F20D39E580032036B /* BKLuaVC.m */,
+				A187841F20D89D8700881D34 /* BKKeyChainVC.h */,
+				A187842020D89D8700881D34 /* BKKeyChainVC.m */,
+				A1753EA620DA3D91004A66E9 /* BKPhotoVC.h */,
+				A1753EA720DA3D91004A66E9 /* BKPhotoVC.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -465,6 +498,11 @@
 					A187C05320D20711006E6D30 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -540,6 +578,7 @@
 				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
+				"${BUILT_PRODUCTS_DIR}/ZLPhotoBrowser/ZLPhotoBrowser.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -553,6 +592,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZLPhotoBrowser.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -591,6 +631,7 @@
 				A187C09A20D20987006E6D30 /* NSDate+HAdd.m in Sources */,
 				A187C06220D20711006E6D30 /* LueLueLue.xcdatamodeld in Sources */,
 				A181BDFA20D369F60032036B /* BKMasonryCell.m in Sources */,
+				A1753EA820DA3D91004A66E9 /* BKPhotoVC.m in Sources */,
 				A187C08F20D20987006E6D30 /* UIAlertController+HAdd.m in Sources */,
 				A187C09120D20987006E6D30 /* UIView+HAdd.m in Sources */,
 				A181BE1820D39E9A0032036B /* LSCTNativeData.m in Sources */,
@@ -598,6 +639,7 @@
 				A187C06A20D20711006E6D30 /* main.m in Sources */,
 				A187C09C20D20987006E6D30 /* UIImage+HAdd.m in Sources */,
 				A187C09420D20987006E6D30 /* UILabel+HAdd.m in Sources */,
+				A187841E20D89D4E00881D34 /* KeychainItemWrapper.m in Sources */,
 				A187C09320D20987006E6D30 /* NSObject+HAdd.m in Sources */,
 				A187C09520D20987006E6D30 /* UIColor+HAdd.m in Sources */,
 				A187C09620D20987006E6D30 /* NSString+HAdd.m in Sources */,
@@ -611,6 +653,7 @@
 				A181BE1020D39E580032036B /* BKLuaVC.m in Sources */,
 				A181BDF720D369E20032036B /* BKMasonryTableVC.m in Sources */,
 				A187C05920D20711006E6D30 /* AppDelegate.m in Sources */,
+				A187842120D89D8700881D34 /* BKKeyChainVC.m in Sources */,
 				A181BE1920D39E9A0032036B /* LogModule.m in Sources */,
 				A187C09820D20987006E6D30 /* UIViewController+HAdd.m in Sources */,
 			);
@@ -747,6 +790,7 @@
 			baseConfigurationReference = 0C48FA93B70DF3E257100E14 /* Pods-LueLueLue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LueLueLue/LueLueLue.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3CLRQE32QL;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -774,6 +818,7 @@
 			baseConfigurationReference = B7D198FC203E457F53DE87B5 /* Pods-LueLueLue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LueLueLue/LueLueLue.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3CLRQE32QL;
 				FRAMEWORK_SEARCH_PATHS = (
